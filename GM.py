@@ -44,15 +44,19 @@ dic = {1:"Ты обворожительна!",
 40:'У тебя космическая, невероятная и просто сказочная красота!'}
 
 while True:
-	if keyboard.is_pressed('enter'):
-		r = random.randint(1,40)
-		bot.send_message( 1765733905, dic[int(r)])
+	try:
+		if keyboard.is_pressed('enter'):
+			r = random.randint(1,40)
+			bot.send_message( 1358247872, dic[int(r)])
 
+	except:
+		exit()
+	
 
 bot.polling()
 	
 
-#if __name__ == '__main__':
+#if __nasme__ == '__main__':
 	#main()
  
 
