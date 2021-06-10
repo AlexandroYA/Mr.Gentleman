@@ -1,6 +1,6 @@
 import telebot
 import keyboard
-bot = telebot.TeleBot(ТОКЕН БОТА)
+bot = telebot.TeleBot("1820043735:AAEpfJj3qDTiiuBBfwlBwa5EWGteWpuq3xA")
 import random
 dic = {1:"Ты обворожительна!",
 2: "Ты будто сошла со страниц красивой сказки!",
@@ -42,23 +42,28 @@ dic = {1:"Ты обворожительна!",
 38:'Ты не воровка? Ведь совершенно бесстыдно ты украла все мои мысли и сердце!',
 39:'Когда я смотрю на тебя, я просто теряю реальность!',
 40:'У тебя космическая, невероятная и просто сказочная красота!'}
-
-while True:
-	try:
+@bot.message_handler(commands = ['start'])
+def get_if(message):
+	while True:
 		if keyboard.is_pressed('enter'):
 			r = random.randint(1,40)
-			bot.send_message( 1358247872, dic[int(r)])
+			bot.send_message( message.chat.id, dic[int(r)])
 
-	except:
-		exit()
+
+
+
 	
-
 bot.polling()
-	
 
-#if __nasme__ == '__main__':
-	#main()
- 
+
+
+
+
+
+
+
+
+
 
 
 
