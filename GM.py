@@ -1,6 +1,6 @@
 import telebot
 import keyboard
-bot = telebot.TeleBot("1820043735:AAEpfJj3qDTiiuBBfwlBwa5EWGteWpuq3xA")
+bot = telebot.TeleBot(ТОКЕН БОТА)
 import random
 dic = {1:"Ты обворожительна!",
 2: "Ты будто сошла со страниц красивой сказки!",
