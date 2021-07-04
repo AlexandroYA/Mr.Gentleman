@@ -44,6 +44,8 @@ dic = {1:"Ты обворожительна!",
 40:'У тебя космическая, невероятная и просто сказочная красота!'}
 @bot.message_handler(commands = ['start'])
 def get_if(message):
+	bot.send_message(message.chat.id, "Привет, {}. Каждый раз когда я нажимаю 'enter' тебе отправляется комплимент!".format(message.from_user.first_name))
+	print("User has come!")
 	while True:
 		if keyboard.is_pressed('enter'):
 			r = random.randint(1,40)
